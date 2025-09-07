@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SD IT Luqmanul Hakim</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1a202c;
+        }
+
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(4px);
+            z-index: -1;
+        }
+
+        .icon-card {
+            background: rgba(13, 13, 13, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .icon-card:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .icon-placeholder {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background-color: #40905D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .search-container {
+            position: relative;
+            margin-bottom: 2.5rem;
+            width: 100%;
+            max-width: 640px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .search-container input {
+            background-color: transparent;
+            outline: none;
+            width: 100%;
+            color: white;
+            padding-left: 2rem;
+            padding-right: 1rem;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            font-size: 1.25rem;
+            color: white;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+    <video id="video-background" autoplay muted loop>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="backdrop"></div>
+
+    <div class="flex flex-col items-center justify-center min-h-screen p-4 relative z-10 mobile-padding">
+
+        <!-- Logo -->
+        <div class="mb-10 text-center">
+            <img src="logo.png" alt="Logo Sekolah" class="mx-auto mb-4 w-32 h-32">
+            <h4 class="text-xl font-semibold mb-1 text-yellow-300">Selamat Datang di</h4>
+            <h1 class="text-4xl md:text-5xl font-bold mb-1 text-green-500">SD IT Luqmanul Hakim</h1>
+            <p class="text-lg text-gray-200 mt-2">Sei Mencirim, Deli Serdang, Sumatera Utara</p>
+        </div>
+
+        <!-- Kolom Pencarian -->
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Pencarian" class="text-lg">
+        </div>
+
+        <!-- Grid Ikon -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">📚</div>
+                <span class="text-sm font-semibold text-yellow-300">Tentang Sekolah</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">📖</div>
+                <span class="text-sm font-semibold text-yellow-300">Kurikulum</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">📢</div>
+                <span class="text-sm font-semibold text-yellow-300">Pengumuman</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">🗓️</div>
+                <span class="text-sm font-semibold text-yellow-300">Kalender</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">🖼️</div>
+                <span class="text-sm font-semibold text-yellow-300">Galeri</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">📞</div>
+                <span class="text-sm font-semibold text-yellow-300">Kontak</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">🎨</div>
+                <span class="text-sm font-semibold text-yellow-300">Ekstrakurikuler</span>
+            </div>
+            <div class="icon-card p-6 rounded-2xl flex flex-col items-center text-center">
+                <div class="icon-placeholder mb-4">👨‍🏫</div>
+                <span class="text-sm font-semibold text-yellow-300">Asatidz/ Asatidzah & Staff</span>
+            </div>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="mt-16 text-center">
+            <h2 class="text-xl font-semibold text-yellow-300 mb-4">Follow Us</h2>
+            <div class="flex space-x-6 justify-center">
+                <a href="https://www.youtube.com/@Luqmanulhakimseimencirim" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.instagram.com/smpitluqmanulhakimseimencirim" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/sditluqmanul.hakim.5" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center text-gray-400 text-sm border-t border-gray-600 pt-4">
+            <p>&copy; 2025 SD IT Luqmanul Hakim. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
